@@ -1,0 +1,78 @@
+<!--
+    Using any of the tools you've worked with so far, create a game of Tic-Tac-Toe.
+Create a Tic-Tac-Toe game grid using your HTML element of choice.
+When a cell in the grid is clicked, an X or O should appear in that spot depending on whose turn it is.
+A heading should say whether it is X's or O's turn and change with each move made.
+A button should be available to clear the grid and restart the game.
+When a player has won, or the board is full and the game results in a draw, a Bootstrap alert or similar Bootstrap component should appear across the screen announcing the winner.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <script
+          src="https://kit.fontawesome.com/3bfd3ce9e5.js"
+          crossorigin="anonymous"
+        ></script>
+        <title>Tic-Tac-Toe</title>
+      </head>
+        <main>
+          <div class="top"> <!--flexbox section with X, O, turn & button to clean score-->
+            <div class="exAndOh">
+              <i class="fa-solid fa-x"></i>
+              <i class="fa-solid fa-o"></i>
+            </div>
+            <section class="turn">
+              <h3 id="colorChange"><i class="fa-solid fa-x" id="turn"></i> TURN</h3>
+            </section>
+            <div>
+              <button class="clearScore" id="clear-score">Clear Score</button>
+            </div>
+          </div>
+          <div class="middle"> <!--9 boxes-->
+            <ul>
+              <li class="box" id="1"></li>
+              <li class="box" id="2"></li>
+              <li class="box" id="3"></li>
+              <li class="box" id="4"></li>
+              <li class="box" id="5"></li>
+              <li class="box" id="6"></li>
+              <li class="box" id="7"></li>
+              <li class="box" id="8"></li>
+              <li class="box" id="9"></li>
+            </ul>
+          </div>
+          <div class="bottom"> <!--player scores and ties-->
+            <ul>
+              <li class="player-one-score">
+                <p>Player 1: X</p>
+                <span id="player-one-score">0</span>
+              </li>
+              <li class="tie-score">
+                <p>TIES</p>
+                <span id="tie-score">0</span>
+              </li>
+              <li class="player-two-score">
+                <p>Player 2: O</p>
+                <span id="player-two-score">0</span>
+              </li>
+            </ul>
+          </div>
+          <div class="winner show-winner" id="winner-declaration"> <!--displays message: show winner & restart game-->
+            <h4 id="winner-text"></h4>
+            <button class="restart-after-win" id="restart-after-win">
+              Play again! :)
+            </button>
+          </div>
+        </main>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
+
